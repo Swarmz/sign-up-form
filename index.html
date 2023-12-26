@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='styles.css'/>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Sign-up Form</title>
 </head>
 <body>
@@ -18,8 +18,8 @@
         </div>
         <div id="sign-up-container">
             <div id="sign-up-intro" class="block">
-                <h1>We don't <em class="italic">only</em> make deliveries<br> We make friends</h1>
-                <p>Here at <span class="italic">Just Eat™</span> we're looking for new friends to join our journey. Are you looking for new opportunities? Join us today!</p>
+                <h1>We don"t <em class="italic">only</em> make deliveries<br> We make friends</h1>
+                <p>Here at <span class="italic">Just Eat™</span> we"re looking for new friends to join our journey. Are you looking for new opportunities? Join us today!</p>
             </div>
             <div id="sign-up-form-container" class="block">
                 <form id="sign-up-form">
@@ -41,7 +41,8 @@
                     </div>
                     <div class="form-input">
                         <label for="password">PASSWORD</label>
-                        <input id="password" name="password" type="password" required>
+                        <input id="password" name="password" type="password" onkeyup="passwordValidate()" required>
+                        <span id="password-mismatch">The passwords do not match.</span>
                     </div>
                     <div class="form-input">   
                         <label for="confirm-password">CONFIRM PASSWORD</label>
@@ -56,16 +57,18 @@
         </div>
     </div>
     <script>
-        const password = document.getElementById('password');
-        const passwordConfirm = document.getElementById('confirm-password');
+        const password = document.getElementById("password");
+        const passwordConfirm = document.getElementById("confirm-password");
 
         let passwordValidate = function(){
-            if (document.getElementById('password').value != document.getElementById('confirm-password').value){
-                password.classList.add('error');
-                passwordConfirm.classList.add('error');
+            if (document.getElementById("password").value != document.getElementById("confirm-password").value){
+                password.classList.add("error");
+                passwordConfirm.classList.add("error");
+                document.getElementById("password-mismatch").style.display = "block";
             } else { 
-                password.classList.remove('error');
-                passwordConfirm.classList.remove('error');
+                password.classList.remove("error");
+                passwordConfirm.classList.remove("error");
+                document.getElementById("password-mismatch").style.display = "none";
             }
         }
     </script>

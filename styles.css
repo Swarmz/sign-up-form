@@ -202,3 +202,17 @@ button:hover {
 .error {
     border: 2px solid #D55C5F;
 }
+
+/* selecting only the form row that has the absolute positioned span child */
+.form-input:has(> span) {
+    position: relative;
+}
+
+#password-mismatch {
+    position: absolute;
+    display: none;
+    font-size: 10px;
+    color: #D55C5F;
+    top: 52px;
+    
+}
