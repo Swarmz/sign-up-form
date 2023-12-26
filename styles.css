@@ -155,13 +155,29 @@ label, input {
 label {
     font-size: 10px;
     letter-spacing: 0.3rem;
+    color: var(--secondary-color)
 }
 
 input {
+    appearance: none;
+    outline: none;
     font-size: 14px;
     padding: 7px;
+    border: 2px solid gray;
 }
 
+/* input[type='text']:invalid,
+input[type='email']:invalid,
+input[type='password']:invalid {
+    border: 2px solid #D55C5F;
+} */
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus {
+    box-shadow: 0px 2px 10px 1px var(--secondary-color);
+    border: 2px solid var(--form-color);
+}
 
 button {
     padding: 8px 16px;
@@ -181,4 +197,9 @@ button:hover {
 
 .italic {
     font-style: italic;
+}
+
+.error {
+    border: 2px solid #D55C5F;
+    content: "Passwords do not match";
 }
