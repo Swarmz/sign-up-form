@@ -10,14 +10,16 @@
 <body>
     <div id="main-container">
         <div id="img-container">
-            <img src="img/bg-img.jpg" alt="delivery man smiling" id="bg-img"></img>
-            <div id="img-text">LOGO</div>
+            <img src="img/bg-img.jpg" alt="delivery man smiling" id="bg-img">
+            <div id="logo-container">
+                <img src="./img/je-logo-resize.png" id="img-logo">
+            </div>
             <div id="img-credit">Photo by <a href="https://unsplash.com/@janoschphotos?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Janosch Diggelmann</a> on <a href="https://unsplash.com/photos/a-person-wearing-a-hat-DdH8tuXfxHw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></div>
         </div>
         <div id="sign-up-container">
             <div id="sign-up-intro" class="block">
-                <h1>We don't only make deliveries<br> We make friends</h1>
-                <p>Here at <span class="italic">Just Eat©</span> we're looking for new friends to join our journey. Are you looking for new opportunities? Join us today!</p>
+                <h1>We don't <em class="italic">only</em> make deliveries<br> We make friends</h1>
+                <p>Here at <span class="italic">Just Eat™</span> we're looking for new friends to join our journey. Are you looking for new opportunities? Join us today!</p>
             </div>
             <div id="sign-up-form-container" class="block">
                 <form id="sign-up-form">
@@ -31,11 +33,11 @@
                     </div>
                     <div class="form-input">
                         <label for="email">EMAIL</label>
-                        <input id="email" name="email"  type="email" placeholder="yamadataro@example.com">
+                        <input id="email" name="email"  type="email" placeholder="johnsmith@example.com">
                     </div>
                     <div class="form-input">   
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input id="phone-number" name="phone-number" type="text" placeholder="xxx-xxxx-xxxx">
+                        <input id="phone-number" name="phone-number" type="text" placeholder="(123)-456-7890">
                     </div>
                     <div class="form-input">
                         <label for="password">PASSWORD</label>
@@ -48,7 +50,7 @@
                 </form>
             </div>
             <div id="sign-up-account" class="block">
-                <button type="submit">Create Account</button>
+                <button type="submit" form="sign-up-form">Create Account</button>
                 <p>Already Have an account? <a href="">Log in</a></p>
             </div>
         </div>
