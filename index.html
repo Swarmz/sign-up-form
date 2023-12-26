@@ -45,7 +45,7 @@
                     </div>
                     <div class="form-input">   
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input id="confirm-password" name="confirm-password" type="password" required>
+                        <input id="confirm-password" name="confirm-password" type="password" onkeyup="passwordValidate()">
                     </div>
                 </form>
             </div>
@@ -55,6 +55,19 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        const password = document.getElementById('password');
+        const passwordConfirm = document.getElementById('confirm-password');
+
+        let passwordValidate = function(){
+            if (document.getElementById('password').value != document.getElementById('confirm-password').value){
+                password.classList.add('error');
+                passwordConfirm.classList.add('error');
+            } else { 
+                password.classList.remove('error');
+                passwordConfirm.classList.remove('error');
+            }
+        }
+    </script>
 </body>
 </html>
